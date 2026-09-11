@@ -8,6 +8,12 @@ app.MapGet("/", () => new
     status = "online"
 });
 
+app.MapGet("/health", () => new
+{
+    status = "healthy",
+    timestamp = DateTime.UtcNow
+});
+
 app.Run();
 
 public partial class Program { }
