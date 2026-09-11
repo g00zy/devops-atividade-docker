@@ -3,7 +3,8 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore DevOpsAtividade.sln
+RUN dotnet restore src/DevOpsAtividade.Api/DevOpsAtividade.Api.csproj
+
 RUN dotnet publish src/DevOpsAtividade.Api/DevOpsAtividade.Api.csproj \
     -c Release \
     -o /app/publish \
