@@ -17,7 +17,7 @@ public class StatusServiceTests
     public void ObterStatus_DeveRetornarOnline()
     {
         var resultado = _service.ObterStatus();
-        Assert.Equal("offline", resultado);
+        Assert.Equal("online", resultado);
     }
 
     [Fact]
